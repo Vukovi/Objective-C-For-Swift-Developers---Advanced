@@ -11,7 +11,7 @@
 @implementation UseBlocks
 
 // ovaj blok je prakticno C-ovska funkcija bez return type-a
-// koja u sebi ima paramtera koji je blok, a on ima return type NSComparisonResult, zove se theBlock i ima parametar NSString
+// koja u sebi ima paramtear koji je blok, a on ima return type NSComparisonResult, zove se theBlock i ima parametar NSString
 void useBlock(NSComparisonResult (^theBlock) (NSString *)) {
     if (NSOrderedSame == theBlock(@"foo")) {
         NSLog(@"Uradi nesto");

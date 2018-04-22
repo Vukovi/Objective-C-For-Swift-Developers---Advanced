@@ -18,7 +18,7 @@
 -(void)startNetworkOperationWithMemoryLeak {
     self.networkOperation = [[NSBlockOperation alloc]init];
     self.networkOperation.completionBlock = ^{
-        _completed = YES; // ovde sa ovim underskorom treba "videti" self, a to je memory leak dakle isto sto i
+        _completed = YES; // ovde sa ovim underskorom treba "videti" self, jer je to u stvari umesto self.completed, a to je memory leak dakle isto sto i
         // self.completed = YES
         // [self setCompleted:YES];
     };
